@@ -1,16 +1,21 @@
 import sqlite3
 
 DATABASE = "movies.db"
+from colorama import Fore, Style, init
+
+init(autoreset=True)
 
 def display_menu():
-    """Display the main menu options."""
-    print("\nMovie Watchlist CLI")
-    print("1. Add a movie")
-    print("2. View all movies")
-    print("3. Update a movie")
-    print("4. Mark a movie as watched")
-    print("5. Delete a movie")
-    print("6. Exit")
+    print(Fore.CYAN + Style.BRIGHT + "=" * 30)
+    print(Fore.YELLOW + "🎥 Movie Watchlist CLI")
+    print(Fore.CYAN + "=" * 30 + Style.RESET_ALL)
+    print(Fore.GREEN + "1. Add a Movie")
+    print(Fore.BLUE + "2. View All Movies")
+    print(Fore.MAGENTA + "3. Update a Movie")
+    print(Fore.YELLOW + "4. Mark as Watched")
+    print(Fore.RED + "5. Delete a Movie")
+    print(Fore.CYAN + "6. Exit")
+    print(Fore.CYAN + "=" * 30)
 
 def add_movie():
     """Add a new movie to the database."""
