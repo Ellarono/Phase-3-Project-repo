@@ -7,7 +7,7 @@ init(autoreset=True)
 
 def display_menu():
     print(Fore.MAGENTA + Style.BRIGHT + "-" * 30)
-    print(Back.YELLOW + Fore.BLACK + "My Movie Watchlist CLI")
+    print(Back.CYAN + Fore.BLACK + "My Movie Watchlist CLI")
     print(Fore.MAGENTA + "-" * 30 + Style.RESET_ALL)
     print(Fore.GREEN + "1. Add a Movie")
     print(Fore.GREEN + "2. View All Movies")
@@ -15,7 +15,7 @@ def display_menu():
     print(Fore.GREEN + "4. Mark as Watched")
     print(Fore.MAGENTA + "5. Delete a Movie")
     print(Fore.CYAN + "6. Exit")
-    print(Fore.CYAN + "_" * 30)
+    print(Fore.MAGENTA + "_" * 30)
 
 def add_movie():
     """Add a new movie to the database."""
