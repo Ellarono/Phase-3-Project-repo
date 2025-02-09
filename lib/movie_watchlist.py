@@ -15,7 +15,7 @@ def display_menu():
     print(Fore.GREEN + "4. Mark as Watched")
     print(Fore.MAGENTA + "5. Delete a Movie")
     print(Fore.CYAN + "6. Exit")
-    print(Fore.MAGENTA + "_" * 30)
+    print(Fore.MAGENTA + "-" * 30)
 
 def add_movie():
     """Add a new movie to the database."""
