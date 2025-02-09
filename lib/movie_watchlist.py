@@ -98,7 +98,7 @@ def mark_movie_as_watched():
     cursor = conn.cursor()
     
     try:
-        movie_id = input("Enter the ID of the movie to mark as watched: ")
+        movie_id = input(Fore.MAGENTA + "Enter the ID of the movie to mark as watched: ")
         
         # Check if the movie exists
         cursor.execute("SELECT * FROM movies WHERE id = ?", (movie_id,))
@@ -125,7 +125,7 @@ def delete_movie():
     cursor = conn.cursor()
     
     try:
-        movie_id = input("Enter the ID of the movie to delete: ")
+        movie_id = input(Fore.RED + "Enter the ID of the movie to delete: ")
         
         # Check if the movie exists
         cursor.execute("SELECT * FROM movies WHERE id = ?", (movie_id,))
@@ -165,7 +165,7 @@ def main():
         elif choice == "5":
             delete_movie()
         elif choice == "6":
-            print("Goodbye!")
+            print(Fore.MAGENTA + "Goodbye!")
             break
         else:
             print("Invalid choice. Please try again.")
