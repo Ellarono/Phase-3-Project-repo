@@ -14,7 +14,7 @@ def display_menu():
     print(Fore.GREEN + "3. Update a Movie")
     print(Fore.GREEN + "4. Mark as Watched")
     print(Fore.MAGENTA + "5. Delete a Movie")
-    print(Fore.MAGENTA + "6. Exit")
+    print(Fore.CYAN + "6. Exit")
     print(Fore.CYAN + "_" * 30)
 
 def add_movie():
