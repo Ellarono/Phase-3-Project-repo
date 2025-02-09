@@ -8,7 +8,7 @@ init(autoreset=True)
 def display_menu():
     print(Fore.CYAN + Style.DIM + "-" * 30)
     print(Back.YELLOW + Fore.BLACK + "My Movie Watchlist CLI")
-    print(Fore.CYAN + "_" * 30 + Style.RESET_ALL)
+    print(Fore.CYAN + "-" * 30 + Style.RESET_ALL)
     print(Fore.GREEN + "1. Add a Movie")
     print(Fore.GREEN + "2. View All Movies")
     print(Fore.GREEN + "3. Update a Movie")
