@@ -19,7 +19,7 @@ def display_menu():
 
 def add_movie():
     """Add a new movie to the database."""
-    title = input("Enter the movie title: ")
+    title = input(Fore.MAGENTA + "Enter the movie title: ")
     genre = input("Enter the genre: ")
     release_year = input("Enter the release year: ")
     
