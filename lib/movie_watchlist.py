@@ -51,7 +51,7 @@ def update_movie():
     cursor = conn.cursor()
     
     try:
-        movie_id = input("Enter the ID of the movie you want to update: ")
+        movie_id = input(Fore.MAGENTA + "Enter the ID of the movie you want to update: ")
         
         # Check if the movie exists
         cursor.execute("SELECT * FROM movies WHERE id = ?", (movie_id,))
