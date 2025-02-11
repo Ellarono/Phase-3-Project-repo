@@ -10,10 +10,12 @@ The Movie Watchlist CLI Application is a simple command-line tool that helps use
 - **Mark a Movie as Watched:** Mark a movie as watched without changing any other details.
 - **Delete a Movie:** Remove a movie from the watchlist.
 - **Exit the Application:** Exit the CLI application.
-Technologies Used
+  
+### Technologies Used
 - **Python:** The primary language used to implement the CLI application.
 - **SQLite:** A lightweight relational database to store movie data.
 - **SQLite3:** Python library used to interact with the SQLite database.
+  
 ### Prerequisites
 Before using this application, ensure that you have Python installed on your system.
 Installation
@@ -78,5 +80,5 @@ Enter your choice (1-6): 2
 Movies in your watchlist:
 ID: 1, Title: Inception, Genre: Sci-Fi, Year: 2010, Status: Not Watched
 ```
-Live Demo
+### Live Demo
 There is no live demo available for this CLI application, but you can try it locally by following the setup instructions above.
