@@ -1,119 +1,82 @@
-# 🎥 Movie Watchlist CLI
+# Movie Watchlist CLI Application
 
-A Python-based Command Line Interface (CLI) application to manage your personal movie watchlist. This application helps you add movies, update details, mark them as watched, and remove them from the list.
+### Overview
+The Movie Watchlist CLI Application is a simple command-line tool that helps users manage their movie watchlist. With this app, users can add, view, update, mark as watched, and delete movies from their personal watchlist. The application uses an SQLite database to store the movie information.
 
----
-
-## 🛠 Features
-
-- **Add Movies**: Add new movies to your watchlist with a title, genre, and release year.
-- **View All Movies**: Display all movies in your watchlist, including watched/unwatched status.
-- **Update Movie Details**: Edit the title, genre, release year, or status of a movie.
-- **Mark as Watched**: Keep track of movies you’ve watched.
-- **Delete Movies**: Remove movies from your watchlist permanently.
-
----
-
-## 📋 Requirements
-
-- Python 3.6+
-- SQLite (pre-installed with Python)
-
----
-
-## 🚀 Getting Started
-
-Follow these steps to set up and run the Movie Watchlist CLI:
-
-### Step 1: Clone the Repository
-
-Clone this repository to your local machine:
+### Features
+- **Add a Movie:** Add a new movie to the watchlist with the title, genre, and release year.
+- **View All Movies:** Display a list of all movies in the watchlist with their details, including watched status.
+- **Update a Movie:** Update the details of an existing movie (title, genre, release year, or watched status).
+- **Mark a Movie as Watched:** Mark a movie as watched without changing any other details.
+- **Delete a Movie:** Remove a movie from the watchlist.
+- **Exit the Application:** Exit the CLI application.
+Technologies Used
+- **Python:** The primary language used to implement the CLI application.
+- **SQLite:** A lightweight relational database to store movie data.
+- **SQLite3:** Python library used to interact with the SQLite database.
+### Prerequisites
+Before using this application, ensure that you have Python installed on your system.
+Installation
+1. Clone the Repository:
 ```bash
-git clone https://github.com/yourusername/movie-watchlist-cli.git
+git clone https://github.com/your-username/movie-watchlist-cli.git
 cd movie-watchlist-cli
 ```
-### Step 2: Initialize the Database
+2. Install Python (if not already installed):
 
-Before running the application, set up the database using the provided script:
+Download Python and follow the installation instructions for your platform.
+3. Setup the Database:
 
-``` bash
+- The initialize_db.py script is provided to create the required SQLite database (movies.db) and tables.
+- Run the initialize_db.py script to initialize the database:
+  
+```bash
 python initialize_db.py
 ```
-This script will create an SQLite database (movies.db) and set up the required table structure.
-
-### Step 3: Run the Application
-Start the CLI application by running:
+4. Running the Application:
+- After setting up the database, run the CLI application with the following command:
 ```bash
-python watchlist.py
+python movie_watchlist.py
 ```
-### Usage Guide
-After launching the application, you’ll see a menu with the following options:
+# Usage
+Once the application is running, you will be prompted with a menu of options. You can:
 
-Menu Options
-Add a Movie
-Add a new movie to your watchlist by providing the following details:
+1. Add a Movie:
+- Choose option 1 and provide the movie title, genre, and release year.
 
-Title (required)
-Genre (optional)
-Release Year (optional)
-View All Movies
-View a complete list of movies in your watchlist. Movies are displayed with their ID, title, genre, release year, and watched status.
+3. View All Movies:
+- Choose option 2 to display all the movies in your watchlist, including their watched status.
 
-Update a Movie
-Edit the details of an existing movie by selecting its ID from the list.
+4. Update a Movie:
+- Choose option 3 and provide the movie ID to update the movie details. You can update the title, genre, release year, and watched status.
 
-Mark a Movie as Watched
-Quickly update the watched status of a movie to "watched."
+5. Mark a Movie as Watched:
+- Choose option 4 and provide the movie ID to mark the movie as watched.
 
-Delete a Movie
-Remove a movie permanently by selecting its ID.
+6.Delete a Movie:
+- Choose option 5 and provide the movie ID to delete the movie from the watchlist.
 
-Exit the Application
-Quit the CLI application
+7.Exit the Application:
+- Choose option 6 to exit the CLI application.
+Sample Menu Interaction
+```bash
+Movie Watchlist CLI
+1. Add a movie
+2. View all movies
+3. Update a movie
+4. Mark a movie as watched
+5. Delete a movie
+6. Exit
 
-### Example Workflow
-Add a Movie:
-Select option 1 and enter the movie details when prompted.
-Example:
-``` yaml
-Enter movie title: The Matrix
-Enter movie genre: Sci-Fi
-Enter release year: 1999
-Movie added successfully!
+Enter your choice (1-6): 1
+Enter the movie title: Inception
+Enter the genre: Sci-Fi
+Enter the release year: 2010
+Movie 'Inception' added successfully.
+
+Enter your choice (1-6): 2
+Movies in your watchlist:
+ID: 1, Title: Inception, Genre: Sci-Fi, Year: 2010, Status: Not Watched
 ```
-View Movies:
-Select option 2 to see the updated list:
-
-ID | Title         | Genre  | Release Year | Watched
-----------------------------------------------------
-1  | The Matrix    | Sci-Fi | 1999         | No
-
-Mark as Watched:
-Select option 4, enter the movie ID, and confirm:
-```
-Enter movie ID to mark as watched: 1
-Movie marked as watched successfully!
-```
-Delete a Movie:
-Select option 5, enter the movie ID, and confirm:
-```
-Enter movie ID to delete: 1
-Movie deleted successfully!
-```
-### Files in This Project
-initialize_db.py: Script to set up the SQLite database.
-watchlist.py: Main CLI application script.
-movies.db: SQLite database file to store movie data.
-
-### Future Enhancements
-Add search functionality to find movies by title, genre, or year.
-Include sorting options for viewing movies.
-Add genre-based filtering.
-Export the watchlist to a CSV or text file.
-
-### Technologies Used
-Python: For building the CLI application.
-SQLite: Lightweight database to store movie information.
-
-
-
+Live Demo
+There is no live demo available for this CLI application, but you can try it locally by following the setup instructions above.
